@@ -32,9 +32,10 @@ In the current version, a new \LuaOTFLoad{} plugin mode, named \mbox{\texttt{dig
   \item {\bf fontloader-digitalkhatt-cff2.lua}: Copied from {\bf fontloader-font-cff.lua} and patched to allow only the current extended glyph to be parsed and not the entire file. Used with {\bf charstrings.lua}.
   \item {\bf luadigitalkhatt.[dll,so]}: The native lua module : HarfBuzz + Justification Algorithm + new OpenType subtables 
 \end{itemize}
-To use the package, all the above files has to be copied in the working directory and in the main tex file you add the command \verb!\usepackage{digitalkhatt}! in the preamble.
-To use the font you call the command \verb!\digitalkhatt{fontsize}! giving the font size as parameter. For example, here the word welcome using a font size of 12pt {\digitalkhatt{12pt}مرحبًا}.
-Since the package uses a Lua native module, you should call \LuaLaTeX{} using the \verb!--shell-escape! command line argument as follows.
+Before using the package, copy the above files in the working directory. To avoid loading the wrong shared library, please delete or rename the library that is not used.
+So if you are in Windows, delete the file luadigitalkhatt.so and if you are on Linux delete the file luadigitalkhatt.dll.Then, in the main tex file, add the command \verb!\usepackage{digitalkhatt}! in the preamble.
+To enable the font, call the command \verb!\digitalkhatt{fontsize}! giving the font size as parameter. For example, in the following the word welcome using a font size of 12pt {\digitalkhatt{12pt}مرحبًا}.
+Since the package uses a Lua native module (i.e., luadigitalkhatt.[dll,so]), you should call \LuaLaTeX{} using the \verb!--shell-escape! command line argument as follows.
 \begin{verbatim}
 lualatex --shell-escape readme.tex
 \end{verbatim}
