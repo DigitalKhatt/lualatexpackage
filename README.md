@@ -9,3 +9,5 @@ lualatex --shell-escape readme.tex
 The `--shell-escape` command line argument is necessay since the package uses a native Lua module. 
 
 The package was tested using the last version of TeX Live 2022 (as of 2022-12-20) on Windows 10 and Debian 10.
+
+This project is sponsored by [@tarteelAI](https://github.com/TarteelAI) [<img src="https://assets-global.website-files.com/6167e862f6dfba5084eb5554/61680717c50ec79defcdb062_logo-group.svg">](https://www.tarteel.ai/)
